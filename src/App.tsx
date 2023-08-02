@@ -110,10 +110,10 @@ function App(props: Props) {
         <div className='h-16'></div>
         <Box className="flex-1 flex" >
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/discover" element={<Discover />} />
-            <Route path="/photography" element={<Photography />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="happy-travel/" element={<Home />} />
+            <Route path="happy-travel/discover" element={<Discover />} />
+            <Route path="happy-travel/photography" element={<Photography />} />
+            <Route path="happy-travel/contact" element={<Contact />} />
           </Routes>
         </Box>
         <Footer />
