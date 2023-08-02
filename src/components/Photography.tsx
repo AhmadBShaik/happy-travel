@@ -12,15 +12,15 @@ function RecentPhotoCard(props: {
   description: string;
 }) {
   return (
-    <div className='border border-black h-full mt-2.5 rounded'>
+    <ul className='border border-black h-full mt-2.5 rounded'>
       <ImageListItem key={props.image}>
         <div>
           <img
-            src={`${props.image}?w=248&fit=crop&auto=format`}
-            srcSet={`${props.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            src={`${props.image}`}
+            srcSet={`${props.image}`}
             alt={props.title}
             loading="lazy"
-            className='object-cover'
+            className='object-cover w-full h-44 lg:h-64'
           />
           <div className="mt-2.5 px-2.5">
             <Typography
@@ -52,14 +52,14 @@ function RecentPhotoCard(props: {
             <div className='flex space-x-1 my-2.5 items-center'>
               <AccessTime style={{ fontSize: '1.2rem' }} />
               <div className='text-sm'>
-                {Math.floor((Math.random() * 10) + 1)} days ago
+                {Math.floor((Math.random() * 10) + 2)} days ago
               </div>
             </div>
           </div>
 
         </div>
       </ImageListItem>
-    </div>
+    </ul>
 
   );
 }
@@ -68,64 +68,57 @@ const photographyItems = [
   {
     title: "Bananthimari Betta",
     image: "https://www.holidify.com/images/cmsuploads/articles/377.jpg",
-    description: `"Bananthi" refers to a mother who is nursing a newborn, and "mari" means the violent goddesses. This captivating place is located at a distance of around 62 kilometres away from Bangalore. It is the most unusual trekking and camping site near Bangalore. Located in the middle of Konanadoddi and Kuthnahalli, Bananthi Betta is a little paradise on earth. The place is full of activities like trekking, boating, treasure hunt, and rappelling. One must carry a rain jacket and enough water bottles.`
+    description: `"Bananthimari Betta, nestled in Karnataka, India, is a captivating hill adorned with lush greenery and a mystical aura. The serene trek to its peak is a nature lover's delight, offering breathtaking views of the surrounding landscapes. Legend has it that the hill once sheltered a sage named Bananthimari, lending it its name. Popular among adventure enthusiasts, it promises an unforgettable experience amid nature's tranquility.`
 
   }, {
 
     title: "Nachikuppam",
     image: "https://www.holidify.com/images/cmsuploads/compressed/Nachikuppam_20190522153701.jpg",
-    description: `Nestled in the hilly terrain of Krishnagiri is the Alphonso capital of Nachikuppam. The best place to camp in Nachikuppam, is inside a 60-acre mango farm called ‘Alphonso by the lake’. It is maintained and promoted by a group called Linger. Starting from the drive towards the place, everything is scenic and colorful. This massive orchard is situated next to a small lake and a forest. Camping around tall mango trees, under a bright night sky and stunning mountains views that envelope the hills is a blissful experience. You can even take some mangoes back with you from the orchard.`,
+    description: `Nachikuppam, a picturesque village in Tamil Nadu, India, enchants with its rustic charm and vibrant culture. Surrounded by verdant fields and hills, it offers a serene escape from urban bustle. The village is known for its warm hospitality, traditional festivals, and handicrafts. Nature enthusiasts can explore nearby forests and waterfalls. Nachikuppam is a hidden gem, inviting travelers to experience the essence of rural India.`,
 
   }, {
 
     title: "Nandi Hills",
     image: "https://www.holidify.com/images/cmsuploads/compressed/NandiHills_20190522151933.jpg",
-    description: `Nandi hills have served the princely kingdom of Mysore for a long time and its rich culture and stunning biodiversity continues to serve hundreds of tourists that flock there every winter. A ruined fortress sits on top of the hill, which was once the summer retreat palace of Tipu Sultan. There are several such structures that recite stories from his reign. Tipu’s drop (a cliff from which prisoners were thrown off), Tipu’s summer residence, Bhoga Nandeeshwara temple and Brahmashram are some popular spots on/near Nandi hills. Besides cultural explorations, you can enjoy cycling, paragliding and trekking. Weather is pleasant year-round but winters are the best time to explore Nandi Hills on foot.`,
+    description: `Nandi Hills, a captivating hill fortress near Bangalore, India, stands tall at an altitude of 1,478 meters. Its breathtaking sunrise and sunset vistas, enveloped by mist, are awe-inspiring. A popular weekend getaway, the hills offer trekking, paragliding, and ancient temples to explore. Nature's beauty and historical allure make Nandi Hills a cherished destination for tourists and locals alike.`,
 
   }
   , {
-
-
     title: "Sakleshpur",
     image: "https://www.holidify.com/images/cmsuploads/articles/386.jpg",
-    description: `Located in the Western Ghats, Sakleshpur is known for its rich biodiversity and exotic flora and fauna. It is a 4-hour drive from Bangalore and approximately 220 km away. This entrancing place cuts a beautiful picture with a scenic setting and hills covered in coffee plantations which make it an ideal place for camping near Bangalore. Plantation walks, jeep safari, biking, horse riding, trekking, and archery are some activities which one should try. `,
+    description: `Sakleshpur, nestled in the Western Ghats of Karnataka, India, is a serene and verdant hill station. Surrounded by coffee and spice plantations, it offers a refreshing escape. The region's lush landscapes, gushing waterfalls, and pleasant climate make it a haven for nature lovers. Adventurers can indulge in trekking and camping, while history enthusiasts can explore ancient temples and forts. Sakleshpur's tranquil charm makes it an ideal destination for a peaceful getaway.`,
 
   }, {
     title: "Chikmagalur",
     image: "https://www.holidify.com/images/cmsuploads/articles/380.jpg",
-    description: `If you are looking for a place to breathe fresh air, then nothing can be better than Chikmagalur. Surrounded by waterfalls and majestic hills, this little wonder provides a chance to connect with nature more than anything. Located in Kemmenagundi, it used to be the favourite summer camp of Krishnaraja Wodeyar IV. Varieties of flowers, wild animals and birds make an unforgettable experience for the travellers.`,
+    description: `Chikmagalur, a paradise in Karnataka, India, is renowned for its misty hills, sprawling coffee estates, and enchanting landscapes. Home to Mullayanagiri, the highest peak in Karnataka, it entices trekkers and nature enthusiasts. The region's soothing climate, picturesque waterfalls, and ancient temples add to its allure. With aromatic coffee and lush greenery in abundance, Chikmagalur promises a rejuvenating experience for travelers seeking serenity and natural beauty.`,
 
   }, {
-
-
     title: "Amedikallu",
     image: "https://www.holidify.com/images/cmsuploads/compressed/5038507067_e955649785_b_20190522145800.jpg",
-    description: `Tracing the Amedikallu peak is difficult and usually preferred by experienced trekkers due to its steep slope and thick vegetation cover. This tortoise-shaped peak is home to one of the most difficult treks near Bangalore. Although the journey can be completed in one day (ascent and descent), it's the humid climate and rocky trails that induce the sweat. Majority of the trail is covered by thick forests and grasslands. Once on top, you can camp overnight and enjoy breathtaking views of mountains like Manchikallu and Omnigudda. This trail is inaccessible during monsoon season.`,
-
-
-
+    description: `Amedikallu, a hidden gem in the Western Ghats of Karnataka, India, captivates with its breathtaking beauty and challenging trek. The trek to Amedikallu peak offers panoramic vistas of lush forests, cascading waterfalls, and rugged terrains. Its unique rock formations and serene atmosphere attract adventurers and nature lovers alike. Amedikallu's offbeat charm promises an unforgettable experience for those seeking an escape into the lap of pristine nature.`,
   }, {
 
     title: "Ettina Bhuja",
     image: "https://www.holidify.com/images/cmsuploads/compressed/5648955580_298b85ed08_b_20190522145542.jpg",
-    description: ` Ettina Bhuja is the relatively unknown sister of Amedikallu. It is located close to Amedikallu and follows the same pattern of thick forest and steep inclines. The trek begins from Shishila, a village located at the base of the hills and is usually covered in 4-5 hours. Trek is moderate and pleasant. Bring a guide along with you to avoid any confusion as the chances of losing track runs high on this trail. This peak remains traffic-free and is great for a quaint camping experience.`,
+    description: `Ettina Bhuja, a majestic peak in Karnataka's Western Ghats, India, lures trekkers with its awe-inspiring beauty and thrilling ascent. The trek is a perfect blend of adventure and serenity, passing through dense forests and grasslands. At the summit, panoramic views and a massive rock formation resembling an ox's shoulder await, rewarding trekkers with an unforgettable experience amidst nature's grandeur.`,
 
   }, {
 
     title: "Hebri",
     image: "https://www.holidify.com/images/cmsuploads/articles/387.jpg",
-    description: `Hebri is located in the Udupi district and has a pleasing environment surrounding it. Animal lovers will have a great time being close to Someshwara Wildlife Sanctuary which is packed with different birds and animals. Travellers are treated to the sight of Kudalatheertha Falls that cascades along the way of the campsite. The brave hearts can try rafting in Varahi River.`,
+    description: `Hebri, a charming town in Udupi district, Karnataka, India, is a serene escape nestled amidst lush greenery and paddy fields. Known for its pleasant climate and tranquil ambiance, Hebri offers a refreshing getaway. The region is famous for its ancient temples, including the Mahishamardini Temple. Nature enthusiasts can explore nearby waterfalls and the Agumbe Rainforest Research Station. Hebri's idyllic charm and warm hospitality make it an ideal destination for a peaceful retreat.`,
 
   },
   {
     title: "Bandaje Arbi",
     image: "https://www.holidify.com/images/cmsuploads/compressed/BandajeArbi_20190522150226.jpg",
-    description: `Another picturesque location from the Western Ghats is the Bandaje Arbi Falls. It is located in the Charmadi Ghat and you can reach there only through trekking. Height of the fall is 200 ft and you have to cover around 15 kms to reach there. Trailing through thick vegetation can be tricky if you’ve never been there before. There are chances that the waterfall might be dry during summers. Trek is slightly difficult but extremely satisfying once the waterfalls come into view.`,
+    description: `Bandaje Arbi, a captivating trekking destination in Karnataka's Western Ghats, India, entices adventurers with its raw beauty and challenging trails. The trek leads through dense forests, gushing streams, and grasslands, offering a thrilling experience. At the summit, panoramic views of the surrounding hills and valleys unfold, rewarding trekkers with a breathtaking sight. Bandaje Arbi is a hidden gem for nature enthusiasts seeking an offbeat and memorable escapade into the heart of wilderness.`,
   },
   {
     title: "Meghane",
     image: "https://www.holidify.com/images/cmsuploads/compressed/14794276888_d4497720a1_b_20190522144211.jpg",
-    description: `Meghane is part of the Sharavathi valley, located in the Shimoga district. It is the highest peak in the entire range and hosts some of the best views of Sharavathi valley. It is enveloped by dense forest, unmarred by pollution and noise. You will encounter several waterfalls on this trek. There is no clear route for this trek and you will probably need a guide to reaching the top. If you’re an experienced trekker and wish to explore unspoiled nature, Meghane is the perfect destination. Rainy season can be difficult to tackle as the slopes will become slippery and leeches will be a constant threat.`,
+    description: `Meghane, in Shimoga district, is the highest peak in the Sharavathi valley. Surrounded by dense forests, it offers stunning views and waterfalls. A guide is recommended for this challenging trek, ideal for experienced trekkers seeking pristine nature. Beware of rain, which can make slopes slippery and attract leeches.`,
   }
 ];
 
@@ -133,16 +126,16 @@ const photographyItems = [
 const items = [{
   title: "Coorg",
   image: "https://www.holidify.com/images/cmsuploads/articles/383.jpg",
-  description: `The very famous Coorg is just a 5-hour drive from the main city, approximately 265 km away. Located at the edge of the forest, it is perfect for those who are adventure enthusiasts and complete with activities like white water rafting, wildlife safari and rope activities. It is a personal recommendation to be an early riser and head for the sunrise view - something you will never forget. The Scotland of India is one of the most picturesque sites for camping near Bangalore which gives its travellers the view of coffee and spice plantation and Harangi backwaters.`,
+  description: `Coorg, also known as Kodagu, is a mesmerizing hill station in Karnataka, India. Renowned for its lush coffee plantations, mist-covered hills, and vibrant culture, it's a haven for nature lovers. Visitors can explore waterfalls, ancient temples, and go trekking. Coorg is a tranquil escape, perfect for a rejuvenating getaway.`,
 
 }, {
-  image: 'https://www.holidify.com/images/cmsuploads/articles/376.jpg',
   title: 'Manchinbele',
-  description: `This is a famous and popular camping site near Bangalore to chill and hang out with friends over the weekend. Paintball, rope course, and water sports like kayaking, canoeing, swimming, and raft building are some of the things to try. This one will surely be a memorable outing. The weather is unpredictable and the mornings are usually cold therefore always carry a light jacket or a cardigan.`,
+  image: 'https://www.holidify.com/images/cmsuploads/articles/376.jpg',
+  description: `Manchinbele, nestled near Bangalore, Karnataka, India, is a serene reservoir surrounded by picturesque hills. This scenic destination offers water-based activities like kayaking, boating, and camping, making it a popular weekend retreat. The lush green surroundings and the tranquil ambiance make Manchinbele an ideal spot for nature enthusiasts and adventure seekers alike.`,
 }, {
   title: "Wayanad",
   image: "https://www.holidify.com/images/cmsuploads/articles/385.jpg",
-  description: `A nearly 6-hour ride from Bangalore will bring you close to heaven called Wayanad. A camper's paradise, it is loaded with various activities like wildlife sightseeing, jeep trails, cross rivers, fishing, speed boating at the dam site and many others. If you are not adventurous, then you can lazily spend the evening around the campfire singing songs and cooking. For the risk-takers, a trip to Thirunelli will bring you amidst the Western Ghats and a tour to tribal villages and paddy fields is highly recommended.`,
+  description: `Wayanad, a captivating district in Kerala, India, is a nature lover's paradise. Nestled in the Western Ghats, it boasts of lush forests, misty hills, and abundant wildlife. The region's attractions include ancient caves, serene lakes, and vibrant spice plantations. Wayanad's tranquil beauty and rich cultural heritage make it a must-visit destination for those seeking an enchanting escape into nature's embrace.`,
 
 },
 ];
@@ -243,28 +236,9 @@ const Photography: React.FC = () => {
     </div>
 
     <div className='cursor-auto'>
-      <div className='sm:hidden'>
-        <ImageList variant="masonry" cols={1} gap={5}>
-          {photographyItems.map((item) => (
-            <RecentPhotoCard {...item} key={item.title} />
-          ))}
-        </ImageList>
-      </div>
-      <div className='hidden sm:grid lg:hidden'>
-        <ImageList variant="masonry" cols={2} gap={7}>
-          {photographyItems.map((item) => (
-            <RecentPhotoCard {...item} key={item.title} />
-          ))}
-        </ImageList>
-      </div>
-      <div className='hidden lg:grid'>
-        <ImageList variant="masonry" cols={3} gap={10}>
-          {photographyItems.map((item) => (
-            <RecentPhotoCard {...item} key={item.title} />
-          ))}
-        </ImageList>
-      </div>
-
+      <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-5'>{photographyItems.map((item, index) => <li key={`${item.title}${index}`}>
+        <RecentPhotoCard {...item} />
+      </li>)}</ul>
     </div>
   </div>
 }

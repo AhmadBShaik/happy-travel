@@ -71,6 +71,7 @@ function TextMobileStepper() {
         {steps[activeStep].description}
       </Box>
       <MobileStepper
+        className='select-none'
         variant="text"
         steps={maxSteps}
         position="static"
@@ -109,6 +110,7 @@ function TextMobileStepper() {
 }
 
 function Hero() {
+  const [email, setEmail] = React.useState('')
   return (
     <>
       <div className="flex-1 flex flex-col w-full min-h-screen">
@@ -130,10 +132,15 @@ function Hero() {
                       Get 10% Off on your next travel
                     </div>
                     <div className="flex flex-col sm:space-x-5 mt-5 text-sm sm:flex-row items-center space-y-5 sm:space-y-0">
-                      <div className="rounded-full border-2 px-5 py-2.5 flex-1  w-full">
-                        Enter your E-Mail
-                      </div>
-                      <div className="rounded-full border-2 px-5 py-2.5 bg-orange-500">
+                      <input
+                        className="rounded-full border-2 px-5 py-2.5 flex-1 text-orange-500 w-full"
+                        placeholder='Enter your E-Mail'
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value) }}
+                      />
+                      <div className="rounded-full border-2 px-5 py-2.5 bg-orange-500" onClick={() => {
+                        setEmail('')
+                      }}>
                         SUBSCRIBE
                       </div>
                     </div>
