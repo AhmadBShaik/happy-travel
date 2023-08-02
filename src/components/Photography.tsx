@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { ImageList, ImageListItem } from '@mui/material';
+import { ImageListItem } from '@mui/material';
 import { AccessTime } from '@mui/icons-material';
 
 
