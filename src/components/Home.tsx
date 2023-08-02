@@ -1,4 +1,4 @@
-import HeroBg from '../assets/hero.png'
+import HeroBg from '/hero.png'
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';

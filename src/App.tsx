@@ -17,7 +17,7 @@ import Home from './components/Home';
 import Discover from './components/Discover';
 import Photography from './components/Photography';
 import Contact from './components/Contact';
-import Logo from './assets/logo.svg'
+import Logo from '/logo.svg'
 import Footer from './components/Footer';
 
 interface Props {
