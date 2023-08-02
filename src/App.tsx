@@ -29,7 +29,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = [{ name: "Home", to: "/" }, { name: "Discover", to: "/discover" }, { name: "Photography", to: "/photography" }, { name: "Contact", to: "/contact" }];
+const navItems = [{ name: "Home", to: "/happy-travel/" }, { name: "Discover", to: "/happy-travel/discover/" }, { name: "Photography", to: "/happy-travel/photography/" }, { name: "Contact", to: "/happy-travel/contact/" }];
 
 function App(props: Props) {
   const { window } = props;
@@ -110,10 +110,10 @@ function App(props: Props) {
         <div className='h-16'></div>
         <Box className="flex-1 flex" >
           <Routes>
-            <Route path="happy-travel/" element={<Home />} />
-            <Route path="happy-travel/discover" element={<Discover />} />
-            <Route path="happy-travel/photography" element={<Photography />} />
-            <Route path="happy-travel/contact" element={<Contact />} />
+            <Route path="/happy-travel/" element={<Home />} />
+            <Route path="/happy-travel/discover" element={<Discover />} />
+            <Route path="/happy-travel/photography" element={<Photography />} />
+            <Route path="/happy-travel/contact" element={<Contact />} />
           </Routes>
         </Box>
         <Footer />
